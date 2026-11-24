@@ -1,0 +1,93 @@
+python -m venv env_deux
+
+.\env_deux\Scripts\activate.bat
+
+git clone https://github.com/pythoniste/tuto_django.git
+
+git checkout v0.0.0
+
+git checkout main
+
+docker compose build --progress=plain --no-cache
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]
+
+
+---- Comparer 2 version dans github--------
+
+https://github.com/pythoniste/tuto_django/compare/v1.0.0...v1.0.1
+
+https://github.com/pythoniste/tuto_django/tree/v0.0.1
+
+
+
+-------cd pour GIT BASH ---------
+cd /c/livre_django2/apprendre_django
+
+-----enregistrer en local-----
+
+git add .
+git commit -m "etape1"
+
+---voir la liste des versions enregistrées----
+
+git log
+
+---- mettre sur GitHub (online ) ajoute juste ce code après l'enregistrement en local [parfois il faut tester 2 fois ] -----
+
+git push -u origin main
+
+--------regarder la différence entre 2 version ----------
+
+https://github.com/steeve91600/Apprendre_Django/compare/c04ac78...4ba1a2d
+
+( après avoir fait un log reprend les identifiants ou juste les 7 premier caractère )
+Initial commit
+git diff 4ba1a2d0f51663d542084dc288ea29ad22a9d0b7..c04ac781720485bc1073aa7e3762d5bc7ab28871 
+
+
+git diff c04ac78 4ba1a2d      
+
+
+git diff "Initial commit" "Etape 2" ( les espaces sont peut être un problème ) ??????????
+
+
+-----------------------------ESSMS---------------
+
+cd /c/Projet_donnees_medicales/projet_2/Analyse_de_donnes_et_Machine_learning_ESSMS
+
+
+-----------------------------------------------
+cd /c/Django/django-web-app
+
+
+ ---------------------------Vérifier l'adresse du depot-----------
+
+
+git remote -v
+
+
+------------EN TRADUISANT L ERREUR-----------
+
+Vous pouvez soit spécifier l'URL depuis la ligne de commande, soit configurer un dépôt distant à l'aide de la commande :
+
+git remote add <nom> <url>
+
+puis effectuer le « push » en utilisant ce nom de dépôt distant :
+
+git push <nom>
+
+--------------ACTION EN CONSEQUENCE---------
+
+git remote add max git@github.com:steeve91600/Apprendre-Django-en-mode-simple.git
+
+git push --set-upstream max master
+
+git push -u max main
+------------------------------
+git remote add max https://github.com/steeve91600/Apprendre-Django-en-mode-simple.git
+
+git remote add origin git@github.com:steeve91600/Apprendre-Django-en-mode-simple.git
+
+
+
